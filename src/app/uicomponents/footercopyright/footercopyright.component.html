@@ -1,0 +1,9 @@
+<div [style.background-color]="fcpbc" [style.height]="fcph">
+  <div [style.font-size]="fcpfs" [style.font-weight]="fcpfw" [style.font-family]="fcpff" [style.padding]="fcpp"
+    [style.position]="fcppo" [style.background-color]="fcpbc">
+    <p [style.margin]="fcpmp" [style.text-align]="fcpta">{{ fcpt | titlecase }}&nbsp;{{crDate | date :'yyyy'}}&nbsp;<a
+        [routerLink]="'../'+fcl" [style.text-decoration]="fcpatd" [style.color]="fcpaci" [style.color]="fcpac">{{fclt}}</a><br />
+      {{fcpt2 | titlecase}}
+    </p>
+  </div>
+</div>

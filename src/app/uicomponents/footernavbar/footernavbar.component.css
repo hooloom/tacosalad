@@ -1,0 +1,142 @@
+nav {
+    width: 100% auto !important;
+    overflow: none;
+    white-space: nowrap
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+  }
+  
+  li {
+    display: inline;
+    position: relative;
+    list-style: none;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  ul ul {
+    position: absolute;
+    display: none;
+  }
+  
+  li:hover ul {
+    display: block;
+  }
+  
+  ul ul ul {
+    top: 0;
+  }
+  
+  ul li ul {
+  
+    visibility: hidden;
+    opacity: 0;
+    min-width: 5rem;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1rem;
+    left: 0;
+    display: none;
+  }
+  
+  ul li:hover>ul,
+  ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+  }
+  
+  ul li ul li {
+    clear: both;
+    width: 100%;
+  }
+  
+  li:hover>ul {
+    display: block;
+  }
+  
+  .row {
+    flex-direction: row;
+  
+  }
+  
+  .col {
+  
+    display: flex;
+  }
+  
+  
+  
+  ul li:nth-child(4) {
+  
+   
+  }
+  
+  @media all and (max-width: 763px) {
+    .caret {
+      display: none
+    }
+  
+    ul li ul {
+      display: none;
+      background-color: none;
+    }
+  
+    ul li:hover>ul,
+    ul li ul:hover {
+      display: none
+    }
+  
+    ul li ul li {
+      display: none;
+    }
+  
+    li:hover>ul {
+      display: block;
+    }
+  
+    ul {
+      flex-basis: 100%;
+      justify-content: center;
+    }
+  
+    ul li {
+      flex-basis: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+  
+    ul li:nth-child(4) {
+      order: 1;
+    }
+  
+    ul li:nth-child(4) {
+      order: 1;
+    }
+  
+  }
+  
+  
+  .caret:after {
+    position: relative;
+    display: inline-block;
+    content: " ";
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-top-color: #ffffff;
+    margin: 9.5px 0 0 4px;
+    left: 4px;
+    top: -4px;
+  }

@@ -1,0 +1,16 @@
+.accent {
+    background-color: #42A948 !important;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+    border-bottom: 5px solid #42A948;
+}
+
+
+.ng-valid {
+    background-color: green;
+}
+#focus {
+    outline: none;
+}

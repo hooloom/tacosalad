@@ -1,0 +1,52 @@
+
+<ul style="position: relative; z-index: inherit; padding-top: 80px; margin-top: 40px;"
+[style.list-style]="fsulls" 
+[style.display]="fsdf"
+[style.justify-content]="fsjc"
+[style.align-items]="fsai"
+[style.text-align]="fsta"
+[style.padding]="fsp"
+[style.margin]="fsm"
+[style.margin-block-start]="fsmbs"
+[style.margin-block-end]="fsmbe"
+[style.margin-inline-start]="fsmis"
+[style.margin-inline-end]="fsmie"
+
+
+>
+
+<!-- [style.padding-inline-start]="fspis" -->
+    <li *ngFor="let item of fssl"
+    [style.display]="fslid"
+    (mouseover)="item.hover=true;" (mouseleave)="item.hover=false;"
+    >
+        <a 
+        [href]="item.url"
+        [style.color]="fsifc"
+        [style.display] ="fsad"
+        [style.text-decoration]="fsatd"
+        
+        
+        routerLinkActive="active" #rlahover="routerLinkActive" #rlasocial="routerLinkActive" [ngStyle]="{
+            'box-shadow': item.hover==true  ? 
+            '0 5px 15px rgba(0,0,0,0.3)' : 'none',
+            'transition': item.hover==true  ? 
+            'opacity 0.3s ease-in-out' : 'none'
+            }"        
+        >
+            <i 
+            [ngClass]="item.fsfa"
+            [style.background-color]="item.fsibc"
+            [style.color]="fsisc"
+            [style.font-size]="fsfs"
+            [style.width]="fsifw"
+            [style.height]="fsifh"
+            [style.display]="fsid"
+            [style.display]="fsidf"
+            [style.justify-content]="fsijc"
+            [style.align-items]="fsiai"
+            [style.text-align]="fsita"
+            ></i></a>
+    </li>
+</ul>
+

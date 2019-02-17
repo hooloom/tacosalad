@@ -1,0 +1,34 @@
+<div>
+<a 
+[style.padding-right]="hlpr"
+[style.padding-left]="hlpl"
+[style.font-size]="hlfs"
+[routerLink]="['/home']"
+>
+<div *ngIf="published; else words">
+<img 
+[style.display]="hld"
+[style.height]="hlh"
+[style.max-height]="hlmh"
+[style.width]="hlw"
+[style.vertical-align]="hlva"
+[src]="hli">
+</div>
+<ng-template #words>
+<div
+[style.display]="hld"
+[style.font-weight]="hlfw"
+[style.font-size]="hlfs"
+[style.color]="hlc"
+class="star"
+><span
+>☆</span>
+
+{{hllt | titlecase}}
+{{hltl | titlecase}}
+<span
+>☆</span>
+</div>
+</ng-template>
+</a>
+</div>

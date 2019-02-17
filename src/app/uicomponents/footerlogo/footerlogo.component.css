@@ -1,0 +1,33 @@
+div{
+    padding-top: 7.5px;
+    vertical-align: middle;
+  }
+  .star {
+      unicode-bidi: bidi-override;
+      direction: ltr;
+      fill: white;
+      
+    }
+    .star > span {
+      display: inline-block;
+      position: relative;
+      fill: white;
+    }
+    .star > span:before,
+    .star > span:before {
+       content: "\2605";
+       position: absolute;
+    }
+    .star > span > span:before,
+    .star > span > span:before {
+       content: "\2605";
+       position: absolute;
+    }
+  
+    @media all and (max-width: 720px) {
+      .star > span{
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+      }
+    }

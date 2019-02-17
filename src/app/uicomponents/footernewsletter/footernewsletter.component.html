@@ -1,0 +1,174 @@
+<div *ngIf="fnpb" [style.padding-bottom]="fnfpbb" [style.position]="fntp" [style.overflow]="fnto" [style.width]="fnw" [style.margin]="fnma">
+  <div *ngIf="inbi; else fnsc">
+    <div [defaultImage]="fndi" [lazyLoad]="fni" [offset]="fno" [style.background-repeat]="fnr" [style.margin-top]="fntm"
+      [style.background-size]="fns" [style.background-position]="fngp" [style.position]="fnp" [style.height]="fnh">
+      <form [formGroup]="nlf" (ngSubmit)="onSubmit()">
+        <div [style.position]="fnfp" [style.top]="fnft" [style.text-align]="fnfta" [style.align-items]="fnfai"
+          [style.margin-left]="fnfml" [style.margin-right]="fnfmr">
+          <div [style.line-height]="fnflh" [style.display]="fnfd" [style.margin-bottom]="fnfmb" [style.vertical-align]="fnfva"
+            [style.float]="fnfdfl">
+            <h3 [style.font-size]="fnfh3fs" [style.color]="fnfh3c" [style.line-height]="fnfh3lh" [style.font-family]="fnfh3fm"
+              [style.font-weight]="fnfh3fw">
+              GET INVOLVED!
+            </h3>
+          </div>
+          <div [style.margin-left]="fnfdml" [style.line-height]="fnfdlh" [style.background-color]="fnfdbc"
+            [style.display]="fnfdd" [style.margin-bottom]="fnfdmb" [style.vertical-align]="fnfdva" [style.float]="fnfdfl">
+            <!-- [style.margin-top]="fnfdmt" -->
+            <label class="sr-only" for="ea">
+              Email address
+            </label>
+            <input clearfocus [style.font-size]="fnfifs" [style.padding-left]="fnfipl" [style.float]="fnfif"
+              [style.line-height]="fnfilh" [style.border]="fnfib" [style.width]="fnfiw" type="email" placeholder="Email"
+              formControlName="ea">
+          </div>
+          <div [style.margin-left]="fnfidml" [style.background-color]="fnfidbc" [style.display]="fnfidd"
+            [style.margin-bottom]="fnfidmb" [style.padding-left]="fnfidipl">
+            <!-- [style.vertical-align]="fnfidva" -->
+            <!-- [style.width]="fnfidw" -->
+            <!-- [style.margin-top]="fnfdmt" -->
+            <!-- [style.line-height]="fnfidlh" -->
+            <!-- [style.padding-left]="fnfidipl" -->
+            <input clearfocus [style.outline]="fnfiol" [style.line-height]="fnfidilh" [style.font-size]="fnfidifs"
+              [style.border]="fnfidib" [style.width]="fnfidiw" name="zc" type="text" placeholder="ZIP" formControlName="zc">
+            <!-- [style.float]="fnfidif" -->
+          </div>
+          <div [style.line-height]="fnfiddlh" [style.margin-left]="fnfiddml" [style.display]="fnfiddd"
+            [style.margin-bottom]="fnfiddmb" [style.vertial-align]="fnfiddva" (mouseover)="hover=true;" (mouseleave)="hover=false;">
+            <button type="submit" routerLinkActive="active" #rlahover="routerLinkActive" #rlasocial="routerLinkActive"
+              [ngStyle]="{
+      'box-shadow': hover==true  ? 
+      fnfiddbbs : fnfiddbbsd,
+      'backgroundColor': hover==true  ? 
+      fnfiddbbc : fnfiddbbcd
+      }"
+              [style.background-color]="fnfiddbbcd" [style.cursor]="fnfiddbucu" [style.border-color]="fnfiddbubc"
+              [style.color]="fnfiddbuc" [style.font-weight]="fnfiddbufw" [style.font-size]="fnfiddbubcfs"
+              [style.outline]="fnfiddbuo" [style.line-height]="fnfiddbulh" [style.width]="fnfiddbuw" [disabled]="nlf.invalid">Update
+              Me
+            </button>
+          </div>
+          <div *ngIf="ea.invalid && ea.dirty" class="notification is-danger">
+            <span [style.color]="fnfidmc">{{ ea.value }}&nbsp;is already registered for the newsletter
+            </span>
+          </div>
+          <div *ngIf="ea.valid && zc.valid" class="notification is-danger">
+            <span [style.color]="fnfidmc">We're Fired Up and Ready To Go
+            </span>
+          </div>
+          <!-- <div *ngIf="ea.valid" class="notification is-success">
+      <strong>{{ ea.value }}</strong> is available
+    </div> -->
+          <!-- && ea.dirty -->
+          <div *ngIf="ea.pending" class="notification is-info">
+            <span [style.color]="fnfidmc">Checking if Subscribed of {{ ea.value }}
+            </span>
+          </div>
+          <!-- 
+      <div 
+      *ngIf="zc.valid" 
+      style="font-size:8px"
+      >
+      <span 
+      style="color: #ffffff"
+      >Zip Code Valid
+      </span>
+      </div>
+    -->
+        </div>
+      </form>
+      <!----end-->
+    </div>
+  </div>
+  <ng-template #fnsc>
+    <div id="c"  [style.overflow]="fnsco" [style.position]="fnscp" [style.background-color]="fnc"
+      [style.background-repeat]="fnr" [style.margin-top]="fntm" [style.background-size]="fns"
+      [style.background-position]="fngp" [style.position]="fnp" [style.height]="fnh">
+      <form [formGroup]="nlf" (ngSubmit)="onSubmit()">
+        <div [style.position]="fnfp" [style.top]="fnft" [style.text-align]="fnfta" [style.align-items]="fnfai"
+          [style.margin-left]="fnfml" [style.margin-right]="fnfmr">
+          <div [style.line-height]="fnflh" [style.display]="fnfd" [style.margin-bottom]="fnfmb" [style.vertical-align]="fnfva"
+            [style.float]="fnfdfl">
+            <h3 [style.font-size]="fnfh3fs" [style.color]="fnfh3c" [style.line-height]="fnfh3lh" [style.font-family]="fnfh3fm"
+              [style.font-weight]="fnfh3fw">
+              GET INVOLVED!
+            </h3>
+          </div>
+          <div [style.margin-left]="fnfdml" [style.line-height]="fnfdlh" [style.background-color]="fnfdbc"
+            [style.display]="fnfdd" [style.margin-bottom]="fnfdmb" [style.vertical-align]="fnfdva" [style.float]="fnfdfl">
+            <!-- [style.margin-top]="fnfdmt" -->
+            <label class="sr-only" for="ea">
+              Email address
+            </label>
+            <input clearfocus [style.font-size]="fnfifs" [style.padding-left]="fnfipl" [style.float]="fnfif"
+              [style.line-height]="fnfilh" [style.border]="fnfib" [style.width]="fnfiw" type="email" placeholder="Email"
+              formControlName="ea">
+          </div>
+          <div [style.margin-left]="fnfidml" [style.background-color]="fnfidbc" [style.display]="fnfidd"
+            [style.margin-bottom]="fnfidmb" >
+            <!-- [style.vertical-align]="fnfidva" -->
+            <!-- [style.width]="fnfidw" -->
+            <!-- [style.margin-top]="fnfdmt" -->
+            <!-- [style.line-height]="fnfidlh" -->
+            <!-- [style.padding-left]="fnfidipl" -->
+            <input clearfocus  [style.line-height]="fnfidilh" [style.font-size]="fnfidifs" [style.padding-left]="fnfipl"
+              [style.border]="fnfidib" [style.width]="fnfidiw" name="zc" type="text" placeholder="ZIP" formControlName="zc">
+            <!-- [style.float]="fnfidif" -->
+          </div>
+          <div [style.line-height]="fnfiddlh" [style.margin-left]="fnfiddml" [style.display]="fnfiddd"
+            [style.margin-bottom]="fnfiddmb" [style.vertial-align]="fnfiddva" (mouseover)="hover=true;" (mouseleave)="hover=false;">
+            <button type="submit" routerLinkActive="active" #rlahover="routerLinkActive" #rlasocial="routerLinkActive"
+              [ngStyle]="{
+      'box-shadow': hover==true  ? 
+      fnfiddbbs : fnfiddbbsd,
+      'backgroundColor': hover==true  ? 
+      fnfiddbbc : fnfiddbbcd
+      }"
+              [style.background-color]="fnfiddbbcd" [style.cursor]="fnfiddbucu" [style.border-color]="fnfiddbubc"
+              [style.color]="fnfiddbuc" [style.font-weight]="fnfiddbufw" [style.font-size]="fnfiddbubcfs"
+              [style.outline]="fnfiddbuo" [style.line-height]="fnfiddbulh" [style.width]="fnfiddbuw" [disabled]="nlf.invalid">Update
+              Me
+            </button>
+          </div>
+          <div *ngIf="ea.invalid && ea.dirty" class="notification is-danger">
+            <span [style.color]="fnfidmc">{{ ea.value }}&nbsp;is already registered for the newsletter
+            </span>
+          </div>
+          <div *ngIf="ea.valid && zc.valid" class="notification is-danger">
+            <span [style.color]="fnfidmc">We're Fired Up and Ready To Go
+            </span>
+          </div>
+          <!-- <div *ngIf="ea.valid" class="notification is-success">
+      <strong>{{ ea.value }}</strong> is available
+    </div> -->
+          <!-- && ea.dirty -->
+          <div *ngIf="ea.pending" class="notification is-info">
+            <span [style.color]="fnfidmc">Checking if Subscribed of {{ ea.value }}
+            </span>
+          </div>
+          <!-- 
+      <div 
+      *ngIf="zc.valid" 
+      style="font-size:8px"
+      >
+      <span 
+      style="color: #ffffff"
+      >Zip Code Valid
+      </span>
+      </div>
+    -->
+        </div>
+      </form>
+    </div>
+  </ng-template>
+  <!--
+    fndi = default image
+    fni = image
+    fnr = repeat
+    fnp = position
+    fns = size
+    fnh = height
+    fnc = footer news letter background color
+    ifni = is footer newsletter background image
+    fnfp = footer newsletter form position
+-->

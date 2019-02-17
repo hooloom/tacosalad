@@ -1,0 +1,18 @@
+<ng-container>
+  <ng-container>
+    <div *ngIf="cspub">
+      <comingsoon></comingsoon>
+    </div>
+  </ng-container>
+    <ng-container>
+      <div *ngIf="mspub">
+      <maintenancemode></maintenancemode>
+      </div>
+    </ng-container>
+   
+    <ng-container>
+      <div *ngIf="contpub">
+      <content [data]="data"></content>
+      </div>
+    </ng-container>
+</ng-container>

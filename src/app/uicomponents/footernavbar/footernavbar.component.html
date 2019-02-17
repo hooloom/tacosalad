@@ -1,0 +1,54 @@
+<div 
+[style.text-align]="fnbdta"
+[style.align-content]="fnbdac"
+[style.margin-top]="fnbdmt"
+[style.margin-bottom]="fnbdmb"
+style="background-color: rgb(204, 204, 204)"
+>
+<ul style="background-color: rgb(204, 204, 204)">
+  <li  *ngFor="let item of fnl | orderby: ['+'+'order']; let i=index; "
+  (mouseover)="item.hover=true;"
+  (mouseleave)="item.hover=false;"
+  >
+    <a 
+    [style.font-family]="fnbaff"
+    [style.font-size]="fnbafs"
+    [style.font-weight]="fnbafw"
+    [style.line-height]="fnbalh"
+    [style.color]="fnbac"
+    [style.padding-left]="fnbpl"
+    [style.padding-right]="fnbpr"
+    [style.cursor]="fnbcp"
+    [routerLink]="'../'+item.link"
+    routerLinkActive="active" #rla="routerLinkActive" 
+    [ngStyle]="{
+      'text-decoration': item.hover===true ?
+      fnbtdu: fnbtdn
+      }"
+   
+    >  {{item.link | titlecase}}</a>
+  </li>
+  <li  *ngFor="let item of fnd | orderby: ['+'+'order']; let i=index; "
+  (mouseover)="item.hover=true;"
+  (mouseleave)="item.hover=false;"
+  >
+    <a 
+    [style.font-family]="fnbaff"
+    [style.font-size]="fnbafs"
+    [style.font-weight]="fnbadfw"
+    [style.line-height]="fnbalh"
+    [style.color]="fnbdac"
+    [style.padding-left]="fnbpl"
+    [style.padding-right]="fnbpr"
+    [style.cursor]="fnbcp"
+    [routerLink]="'../'+item.link"
+    routerLinkActive="active" #rla="routerLinkActive"
+    [ngStyle]="{
+      'text-decoration': item.hover===true ?
+      fnbtdu: fnbtdn
+      }"
+    >  {{item.link | titlecase}}</a>
+  </li>
+ 
+</ul>
+

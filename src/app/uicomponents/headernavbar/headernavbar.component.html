@@ -1,0 +1,74 @@
+<div id="a">
+<div #spacer></div>
+
+<div stickyThing [spacer]="spacer" [style.background-color]="hnpdbc" [style.color]="hnnlpfc" [style.font-family]="hff">
+  <div [style.margin-left]="hnlm" [style.margin-right]="hnrm">
+    <ul>
+      
+      <li>
+        <headerlogo [data]="data"></headerlogo>
+      </li>
+     
+      <li [style.color]="hnnlpfc" style="font-size: 16px" *ngFor="let item of hnnpl | orderby: ['+'+'order']; let i=index; "
+        [style.padding]="hnp" (mouseover)="item.hover=true;"
+      
+         (mouseleave)="item.hover=false;"
+         [ngStyle]="{
+          backgroundColor: item.hover==true  ? 
+          hnnlphc : hnpdbc }"
+          >
+
+        <a [style.color]="hnnlpfc" [style.font-weight]="hnnlpfw" [routerLink]="'../'+item.link"
+          routerLinkActive="active" #rla="routerLinkActive" [style.min-height]="hnpdmh"
+          [ngStyle]="{
+            backgroundColor: item.hover==true  ? 
+            hnnlphc : hnpdbc,
+            'text-decoration': item.hover===true ?
+            'underline' : 'none'
+            }">
+          <span [style.min-width]="hnpdw" [ngStyle]="{'text-decoration':rla.isActive ? 'underline' : 'none'}">{{item.link | titlecase}}</span>
+          <span *ngIf="item.children" class="caret">
+          </span>
+        </a>
+        <ul style="list-style-type: none;">
+          <li [style.padding]="hnp" style="display: block; z-index: 10000" [style.background-color]="hnnlphc" (mouseover)="child.hover=true;"
+            (mouseleave)="child.hover=false;" *ngFor="let child of item.child"
+            [ngStyle]="{
+              backgroundColor: rlachild.isActive ? 
+              hnnlchb : hnnlcb
+  
+          }">
+            <a [style.color]="hnnlpfc" [style.font-weight]="hnnlpfw" [routerLink]="'../'+child.link"
+              routerLinkActive="active" #rlachild="routerLinkActive" 
+              [ngStyle]="{'text-decoration': child.hover===true ?
+                                'underline': 'none'
+                                }">
+              <span [ngStyle]="{'text-decoration':rlachild.isActive ? 'underline' : none}">
+                {{child.link | titlecase}}
+              </span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      
+      <li [style.color]="hnnlpfc" [style.font-weight]="hnnlpfw" [style.padding]="hnp"
+        [style.background-color]="hnpdb" *ngFor="let item of hnndl; let i=index; "
+        (mouseover)="item.hover=true;" (mouseleave)="item.hover=false;">
+        <a [style.color]="hnnlpfc" [style.font-weight]="hnnlpfw" [routerLink]="'../'+item.link"
+          routerLinkActive="active" #rlahover="routerLinkActive" #rladonate="routerLinkActive" [ngStyle]="{
+                        'text-decoration': item.hover==true  ? 
+                        'underline' : 'none',
+                        backgroundColor: rladonate.isActive  ? 
+                        hnpdh : hnpdb
+                        }">
+          <span [ngStyle]="{
+                        'text-decoration': rlahover.isActive ?
+                        'underline' : 'none'}">
+            {{item.link | titlecase}}
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

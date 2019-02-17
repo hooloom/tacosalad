@@ -1,0 +1,20 @@
+<ng-container>
+<mat-toolbar [style.background-color]="data.colors.primarycolor">
+   
+    <ul *ngFor="let item of data.menulinks | menu" [style.background-color]="background">
+        <li>
+
+           <a [routerLink]="['../'+item.link]" >{{item.link}}</a>
+           <ul  >
+
+                <li *ngFor="let child of item.child" [style.background-color]="child.background">
+                        <a [routerLink]="['/../../'+child.link]" >{{child.link}}</a>
+          
+                </li>
+            </ul>
+     
+        </li>
+    </ul>
+    {{data.name}}
+</mat-toolbar>
+</ng-container>

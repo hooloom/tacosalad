@@ -1,0 +1,40 @@
+.footer{
+   position: relative;
+   bottom: 0px;
+   width: 100%;
+   flex-shrink: 0;
+}
+.col{
+    flex: 1 1 auto; 
+}
+.wrap {
+    display: flex;
+    width: 100% !important;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .wrap li:nth-child(4) {
+    flex:1;
+  }
+  @media all and (max-width: 400px) {
+      
+    .wrap li {
+      flex-basis: 100%;
+      min-width: 100%;
+    }
+    .wrap li:nth-child(4) {
+      order: 1;
+    }
+    
+}
+
+
+.col{
+  flex: 1 1 auto; 
+}
+
+#flex { 
+  display: flex; 
+  flex-direction: column;
+}

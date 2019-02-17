@@ -1,0 +1,30 @@
+<div style="text-align: center;">
+  <a 
+ 
+  [style.padding-right]="flpr"
+  [style.padding-left]="flpl"
+  [style.font-size]="flfs"
+  [routerLink]="['/home']"
+  >
+  <div *ngIf="published; else words" [style.margin-top]="flmt">
+  <img 
+  [style.display]="fld"
+  [style.height]="flh"
+  [style.max-height]="flmh"
+  [style.width]="flw"
+  [style.vertical-align]="flva"
+  [src]="fli">
+  </div>
+  <ng-template #words>
+  <div
+  [style.display]="fld"
+  [style.font-weight]="flfw"
+  [style.font-size]="flfs"
+  [style.color]="flc"
+  [style.margin-top]="flmt"
+  class="star"
+  ><span><span class="star">☆</span>{{fllt | titlecase}}&nbsp;{{fltl | titlecase}}<span class="star">☆</span></span>
+  </div>
+  </ng-template>
+  </a>
+  </div>

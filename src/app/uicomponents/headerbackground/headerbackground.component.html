@@ -1,0 +1,40 @@
+<div *ngIf = "hpb">
+<div *ngIf ="ihbi; else hbc">
+
+<div 
+id ="c"
+[defaultImage]="hbdi" 
+[lazyLoad]="hbi" 
+[offset]="hbo"
+[style.background-repeat]="hbr"
+
+[style.background-size]="hbs"
+[style.background-position]="hbgp"
+[style.position]="hbp"
+[style.height]="hbh"
+>
+</div>
+</div>
+<ng-template #hbc>
+    <div 
+    id ="c"
+[style.background-color]="hbc"
+[style.background-repeat]="hbr"
+
+[style.background-size]="hbs"
+[style.background-position]="hbgp"
+[style.position]="hbp"
+[style.height]="hbh"></div>
+
+</ng-template>
+<!--
+    hbdi = default image
+    hbi = image
+    hbr = repeat
+    hbp = position
+    hbs = size
+    hbh = height
+    ihbi = is header background image
+    hbc = header background color
+-->
+</div>

@@ -1,0 +1,47 @@
+<div *ngIf = "fpb" 
+[style.position]="fbtp"
+[style.overflow]="fbto"
+[style.width]="fbw"
+>
+    <div *ngIf ="ifbi; else fbsc">
+    
+    <div 
+    id ="g"
+    [defaultImage]="fbdi" 
+    [lazyLoad]="fbi" 
+    [offset]="fbo"
+    [style.background-repeat]="fbr"
+    
+    [style.background-size]="fbs"
+    [style.background-position]="fbgp"
+    [style.position]="fbp"
+    [style.height]="fbh"
+    [style.width]="fbw"
+    >
+    </div>
+    </div>
+    <ng-template #fbsc>
+    <div
+    id ="c"
+    [style.overflow]="fbsco"
+    [style.position]="fbscp"
+    [style.background-color]="fbc"
+    [style.background-repeat]="fbr"
+    
+    [style.background-size]="fbs"
+    [style.background-position]="fbgp"
+    [style.position]="fbp"
+    [style.height]="fbh"
+    [style.width]="fbsw"></div>
+    
+    </ng-template>
+<!--
+    fbdi = default image
+    fbi = image
+    fbr = repeat
+    fbp = position
+    fbs = size
+    fbh = height
+    fbc = background color
+    ifbi = is footer background image
+-->

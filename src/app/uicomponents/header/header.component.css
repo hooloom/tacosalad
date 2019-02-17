@@ -1,0 +1,12 @@
+.col{
+    flex: 1 1 auto; 
+}
+
+#flex { 
+    display: flex; 
+    flex-direction: column;
+}
+#a { order: 3; }
+#b { order: 2; }
+#c { order: 1; }
+#d { order: 4; }
